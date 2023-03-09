@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -16,8 +14,8 @@ public class Main {
     public static void task1() {
         int[] arr = generateRandomArray();
         int totalWaste = 0;
-        for (int i = 0; i < arr.length; i++) {
-            totalWaste = totalWaste + arr[i];
+        for (int j : arr) {
+            totalWaste = totalWaste + j;
         }
         System.out.println("Сумма трат за месяц составила: " + totalWaste + " рублей");
     }
@@ -25,14 +23,14 @@ public class Main {
         int[] arr = generateRandomArray();
         int minWaste = 200000000;
         int maxWaste = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if(maxWaste < arr[i]){
-                maxWaste = arr[i];
+        for (int j : arr) {
+            if (maxWaste < j) {
+                maxWaste = j;
             }
-            if (minWaste > arr[i]) {
-                minWaste = arr[i];
+            if (minWaste > j) {
+                minWaste = j;
             }
-            }
+        }
         System.out.println("Минимальная сумма трат за день составила: " + minWaste + " рублей");
         System.out.println("Максимальная сумма трат за день составила: " + maxWaste + " рублей");
         }
